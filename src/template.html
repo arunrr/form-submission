@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <main>
+      <section class="left-side">
+        <div class="logo-container">
+          <img src="" alt="logo" />
+          <h1>Logo</h1>
+        </div>
+      </section>
+      <section class="right-side">
+        <div class="form-heading">
+          <span>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </span>
+          <span>Sign up now to get started.</span>>
+          <p>You know you want to.</p>
+        </div>
+        <div class="form-container">
+          <p>Let's do this!</p>
+          <form action="" method="post">
+            <div class="form-control">
+              <label for="first_name">first name</label>
+              <input type="text" name="first_name" id="first_name" />
+              <span class="error">* First name must not be empty</span>
+            </div>
+            <div class="form-control">
+              <label for="last_name">last name</label>
+              <input type="text" name="last_name" id="last_name" />
+              <span class="error">* Last name must not be empty</span>
+            </div>
+            <div class="form-control">
+              <label for="email">email</label>
+              <input type="email" name="email" id="email" />
+              <span class="error">* Enter valid email address</span>
+            </div>
+            <div class="form-control">
+              <label for="phone">phone number</label>
+              <input type="tel" pattern="[0-9]{7}" name="phone" id="phone" />
+              <span class="error">* Phone number must be of 7 digits</span>
+            </div>
+            <div class="form-control">
+              <label for="password">password</label>
+              <input type="text" name="password" id="password" />
+              <span class="error">* Passwords do not match</span>
+            </div>
+            <div class="form-control">
+              <label for="password_confirm">confirm password</label>
+              <input
+                type="text"
+                name="password_confirm"
+                id="password_confirm"
+              />
+            </div>
+            <button type="submit">create account</button>
+          </form>
+          <span>Already have an account? <a href="#">Log in </a></span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
