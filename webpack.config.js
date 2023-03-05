@@ -44,8 +44,8 @@ const config = {
         use: [stylesHandler, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        test: /\.(png|jpeg|jpg|gif)$/i,
+        type: "asset/resource",
       },
 
       // Add your rules for custom modules here
@@ -55,7 +55,7 @@ const config = {
 };
 
 module.exports = () => {
-  stats: "minimal";
+  // stats: "minimal";
 
   if (isProduction) {
     config.mode = "production";
