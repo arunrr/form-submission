@@ -38,6 +38,10 @@ $clr-gray: rgba(200, 194, 194, 0.681);
   color: $clr-error;
 }
 
+.error-border {
+  border: 2px solid $clr-error !important;
+}
+
 .vertical-line {
   border: 1px solid $clr-gray;
   display: inline-block;
@@ -66,7 +70,7 @@ body {
         padding: 0.6rem;
         color: $clr-white;
         background-color: $clr-dark;
-        @include flex-style($align: center, $justify: center);
+        @include flex-style();
         gap: 1.5rem;
 
         img {
@@ -99,11 +103,13 @@ body {
           margin: 1.5rem 0;
           width: 100%;
           .row {
+            width: 100%;
             @include flex-style($justify: flex-start);
             flex-wrap: wrap;
-            gap: 5rem;
+            gap: 2rem;
 
             .form-control {
+              flex: 1;
               display: flex;
               flex-direction: column;
               gap: 0.5rem;
@@ -116,16 +122,12 @@ body {
                 outline: none;
                 border: 1px solid $clr-gray;
                 border-radius: 5px;
-                width: 17rem;
-                height: 2rem;
+                height: 3rem;
                 padding: 0.5rem;
                 transition: border 100ms linear;
 
                 &:focus {
                   border: 2px solid $clr-focus;
-                }
-                &:invalid {
-                  border: 2px solid $clr-error;
                 }
               }
             }
@@ -166,24 +168,23 @@ body {
         width: 100vw;
       }
       section.right-side {
-        padding: 1rem;
+        padding: 2rem;
         .form-container {
           form {
             .row {
+              @include flex-style($direction: column);
               gap: 3rem;
 
               .form-control {
                 width: 100%;
                 input {
                   width: 100%;
-                  height: 3rem;
                 }
               }
             }
           }
           button {
-            margin-left: 50%;
-            transform: translateX(-50%);
+            margin: 0 auto;
           }
         }
         span.login-text {
